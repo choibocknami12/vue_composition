@@ -16,8 +16,12 @@ class BoardFactory extends Factory
      */
     public function definition()
     {
+        $user = User::select('id')->inRandomOrder()->first();
         return [
-            //
+            'user_id' => $user->id,
+            'content' => $this->faker->realText(rand(10, 100)),
+            'img' => '/img/cat'.rand(1,3).'.jpg',
+            'like' => rand(1,300),
         ];
     }
 }

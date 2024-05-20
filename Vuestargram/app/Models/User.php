@@ -19,8 +19,11 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'email',
+        'account',
         'password',
+        'gender',
+        'profile',
+        'refresh_token',
     ];
 
     /**
@@ -30,15 +33,25 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
-        'remember_token',
+        'refresh_token',
     ];
 
     /**
-     * The attributes that should be cast.
+     * TimeZone format when serializing JSON
      *
-     * @var array<string, string>
+     * @param \DateTimeInterface $date
+     *
+     * @return String('Y-m-d H:i:s')
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    protected function serializeDate(\DateTimeInterface $date)
+    {
+        return $date->format('Y-m-d H:i:s');
+    }
+
+    /**
+     * Accessor : Column gender
+     */
+    public function getGenderAttribute($value) {
+        return $value == '0' ? '남자' : '여자';
+    }
 }
