@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('account', 20)->unique();
             $table->string('password');
             $table->char('gender', 1)->comment('0: 남, 1: 여');
-            $table->strin('profile', 100)->nullable();
+            $table->string('profile', 100)->nullable();
             $table->string('refresh_token', 512)->nullable();
             $table->timestamps();
             $table->softDeletes();

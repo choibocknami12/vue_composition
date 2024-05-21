@@ -21243,7 +21243,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n    padding: 10px 10px;\r\n    max-width: 800px;\r\n    margin: auto;\r\n    -ms-overflow-style: none;\r\n}\r\n\r\n::-webkit-scrollbar {\r\n    display: none;\r\n}\r\n\r\nhr {\r\n    margin: 10px 0;\r\n}\r\n\r\nh1 {\r\n    font-size: 1.5rem;\r\n}\r\n\r\n/* a Tag */\r\na {\r\n    text-decoration: none;\r\n    color: #000;\r\n}\r\na:hover {\r\n    font-weight: 900;\r\n}\r\n\r\n/* Button */\r\n.btn-group {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    gap: 10px;\r\n}\r\n\r\n.btn {\r\n    border-radius: 15px;\r\n    font-size: 1rem;\r\n    height: 40px;\r\n    line-height: 40px;\r\n    border: none;\r\n    text-decoration: none;\r\n    cursor: pointer;\r\n    text-align: center;\r\n}\r\n.btn:hover {\r\n    font-weight: 900;\r\n}\r\n.btn-header {\r\n    width: 80px;\r\n}\r\n.btn-close {\r\n    width: 60px;\r\n}\r\n.btn-bg-black {\r\n    color: #fff;\r\n    background-color: #000;\r\n}\r\n.btn-bg-white {\r\n    color: #000;\r\n    background-color: #fff;\r\n}\r\n\r\n/* Form */\r\n.form-box {\r\n    display: grid;\r\n    grid-template-columns: 1fr;\r\n    gap: 10px;\r\n    place-items: center;\r\n    margin: 20px auto;\r\n    width: 300px;\r\n    border: 1px solid #c5c5c5;\r\n    padding: 0 20px 20px;\r\n}\r\n.form-box > * {\r\n    width: 80%;\r\n    margin: 5px;\r\n}\r\n.form-box > input:not([type=\"file\"]) {\r\n    height: 40px;\r\n    background-color: #f0f0f0;\r\n    border-radius: 5px;\r\n    border: 1px solid #c5c5c5;\r\n    padding: 0 10px;\r\n}\r\n.form-title {\r\n    font-size: 2rem;\r\n    font-weight: 900;\r\n    margin: 20px;\r\n    text-align: center;\r\n}\r\ntextarea {\r\n    width: 100%;\r\n    height: 160px;\r\n    border: none;\r\n    resize: none;\r\n    padding: 5px;\r\n}\r\ntextarea:focus {\r\n    outline: none;\r\n    border: 1px solid #c5c5c5;\r\n    border-radius: 10px;\r\n}\r\n.radio-box {\r\n    display: flex;\r\n    justify-content: space-around;\r\n}\r\n.radio-box label {\r\n    margin-right: 5px;\r\n}\r\n\r\n/* Header */\r\nheader {\r\n    padding: 0 20px;\r\n}\r\n.title {\r\n    display: flex;\r\n    align-items: center;\r\n}\r\n/* .header-container{\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    max-width: 1000px;\r\n    padding: 10px 20px;\r\n} */\r\n.header-content {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n.img-logo {\r\n    width: 50px;\r\n    height: 50px;\r\n}\r\n\r\n/* main */\r\n.container {\r\n    display: flex;\r\n    justify-content: center;\r\n}\r\n\r\n/* Footer */\r\nfooter {\r\n    margin-top: 50px;\r\n    text-align: center;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nbody {\n    padding: 10px 10px;\n    max-width: 800px;\n    margin: auto;\n    -ms-overflow-style: none;\n}\n\n::-webkit-scrollbar {\n    display: none;\n}\n\nhr {\n    margin: 10px 0;\n}\n\nh1 {\n    font-size: 1.5rem;\n}\n\n/* a Tag */\na {\n    text-decoration: none;\n    color: #000;\n}\na:hover {\n    font-weight: 900;\n}\n\n/* Button */\n.btn-group {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    gap: 10px;\n}\n\n.btn {\n    border-radius: 15px;\n    font-size: 1rem;\n    height: 40px;\n    line-height: 40px;\n    border: none;\n    text-decoration: none;\n    cursor: pointer;\n    text-align: center;\n}\n.btn:hover {\n    font-weight: 900;\n}\n.btn-header {\n    width: 80px;\n}\n.btn-close {\n    width: 60px;\n}\n.btn-bg-black {\n    color: #fff;\n    background-color: #000;\n}\n.btn-bg-white {\n    color: #000;\n    background-color: #fff;\n}\n\n/* Form */\n.form-box {\n    display: grid;\n    grid-template-columns: 1fr;\n    gap: 10px;\n    place-items: center;\n    margin: 20px auto;\n    width: 300px;\n    border: 1px solid #c5c5c5;\n    padding: 0 20px 20px;\n}\n.form-box > * {\n    width: 80%;\n    margin: 5px;\n}\n.form-box > input:not([type=\"file\"]) {\n    height: 40px;\n    background-color: #f0f0f0;\n    border-radius: 5px;\n    border: 1px solid #c5c5c5;\n    padding: 0 10px;\n}\n.form-title {\n    font-size: 2rem;\n    font-weight: 900;\n    margin: 20px;\n    text-align: center;\n}\ntextarea {\n    width: 100%;\n    height: 160px;\n    border: none;\n    resize: none;\n    padding: 5px;\n}\ntextarea:focus {\n    outline: none;\n    border: 1px solid #c5c5c5;\n    border-radius: 10px;\n}\n.radio-box {\n    display: flex;\n    justify-content: space-around;\n}\n.radio-box label {\n    margin-right: 5px;\n}\n\n/* Header */\nheader {\n    padding: 0 20px;\n}\n.title {\n    display: flex;\n    align-items: center;\n}\n/* .header-container{\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    max-width: 1000px;\n    padding: 10px 20px;\n} */\n.header-content {\n    display: flex;\n    justify-content: space-between;\n}\n\n.img-logo {\n    width: 50px;\n    height: 50px;\n}\n\n/* main */\n.container {\n    display: flex;\n    justify-content: center;\n}\n\n/* Footer */\nfooter {\n    margin-top: 50px;\n    text-align: center;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -39089,14 +39089,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _AppComponent_vue_vue_type_template_id_1a737966__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppComponent.vue?vue&type=template&id=1a737966 */ "./resources/components/AppComponent.vue?vue&type=template&id=1a737966");
 /* harmony import */ var _AppComponent_vue_vue_type_style_index_0_id_1a737966_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppComponent.vue?vue&type=style&index=0&id=1a737966&lang=css */ "./resources/components/AppComponent.vue?vue&type=style&index=0&id=1a737966&lang=css");
-/* harmony import */ var D_workspace_vue_composition_Vuestargram_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_vue_composition_Vuestargram_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 const script = {}
 
 ;
 
 
-const __exports__ = /*#__PURE__*/(0,D_workspace_vue_composition_Vuestargram_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(script, [['render',_AppComponent_vue_vue_type_template_id_1a737966__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/components/AppComponent.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_vue_composition_Vuestargram_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(script, [['render',_AppComponent_vue_vue_type_template_id_1a737966__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/components/AppComponent.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -39117,12 +39117,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _BoardComponent_vue_vue_type_template_id_15212468__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BoardComponent.vue?vue&type=template&id=15212468 */ "./resources/components/BoardComponent.vue?vue&type=template&id=15212468");
-/* harmony import */ var D_workspace_vue_composition_Vuestargram_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_vue_composition_Vuestargram_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 const script = {}
 
 ;
-const __exports__ = /*#__PURE__*/(0,D_workspace_vue_composition_Vuestargram_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_BoardComponent_vue_vue_type_template_id_15212468__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/components/BoardComponent.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_vue_composition_Vuestargram_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_1__["default"])(script, [['render',_BoardComponent_vue_vue_type_template_id_15212468__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/components/BoardComponent.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -39144,13 +39144,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _LoginComponent_vue_vue_type_template_id_939b5e76__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LoginComponent.vue?vue&type=template&id=939b5e76 */ "./resources/components/LoginComponent.vue?vue&type=template&id=939b5e76");
 /* harmony import */ var _LoginComponent_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LoginComponent.vue?vue&type=script&setup=true&lang=js */ "./resources/components/LoginComponent.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var D_workspace_vue_composition_Vuestargram_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var C_vue_composition_Vuestargram_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,D_workspace_vue_composition_Vuestargram_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_LoginComponent_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_LoginComponent_vue_vue_type_template_id_939b5e76__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/components/LoginComponent.vue"]])
+const __exports__ = /*#__PURE__*/(0,C_vue_composition_Vuestargram_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_LoginComponent_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_LoginComponent_vue_vue_type_template_id_939b5e76__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/components/LoginComponent.vue"]])
 /* hot reload */
 if (false) {}
 
