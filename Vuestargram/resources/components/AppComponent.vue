@@ -11,12 +11,14 @@
                         <img src="/logo.png" class="img-logo">
                         <div class="btn-group">
                             <div v-if="true">
-                                <router-link to="/login">
-                                    <button class="btn btn-header btn-bg-black">로그인</button>
-                                </router-link>
-                                <router-link to="/login">
-                                    <button class="btn btn-header btn-bg-white">가입하기</button>
-                                </router-link>
+                                <div v-if="!$store.state.authFlg">
+                                    <router-link to="/login">
+                                        <button class="btn btn-header btn-bg-black">로그인</button>
+                                    </router-link>
+                                    <router-link to="/login">
+                                        <button class="btn btn-header btn-bg-white">가입하기</button>
+                                    </router-link>
+                                </div>
                             </div>
                             <div v-else>
                                 <button class="btn btn-header btn-bg-black">로그아웃</button>
@@ -28,6 +30,8 @@
         <hr>
 
         <main>
+            <UserInfoComponent v-if="$store.state.authFlg" />
+
             <div class="container">
                 <router-view></router-view>
             </div>
@@ -40,6 +44,7 @@
 </template>
 
 <script setup>
+import UserInfoComponent from './UserInfoComponent.vue';
 
 </script>
 

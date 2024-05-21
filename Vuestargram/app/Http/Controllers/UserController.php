@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Exceptions\MyAuthException;
+use App\Exceptions\MyValidateException;
 use App\Models\User;
 use MyUserValidate;
+// use MyToken;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
-use App\Exceptions\MyAuthException;
-use App\Exceptions\MyValidationException;
 use Illuminate\Support\Facades\Hash;
-use MyToken;
+use Illuminate\Support\Facades\Log;
+use App\Utils\MyToken;
 
 class UserController extends Controller
 {
@@ -31,7 +32,9 @@ class UserController extends Controller
         }
 
         // 유저 정보 조회
-        $resultUserInfo = User::where('account', $requset->account)->first();
+        $resultUserInfo = User::where('account', $requset->account)
+                            ->withCount('boards')
+                            ->first();
 
         // 미등록 유저 체크
         if(!isset($resultUserInfo)) {
@@ -46,6 +49,9 @@ class UserController extends Controller
 
         // 토큰 발행
         list($accessToken, $refreshToken) = MyToken::createTokens($resultUserInfo);
+
+        // 리프래시 토큰 저장
+        MyToken::updateRefreshToken($resultUserInfo, $refreshToken);
 
         // response Data
         $responseData = [

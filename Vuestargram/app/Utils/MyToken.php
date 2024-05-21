@@ -4,6 +4,8 @@ namespace App\Utils;
 
 use MyEncrypt;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
+use PDOException;
 
 class MyToken {
     /**
@@ -92,5 +94,29 @@ class MyToken {
 
     private function makeSignature(string $header, string $payload) {
         return MyEncrypt::hashWithSalt(env('TOKEN_ALG'), $header.env('TOKEN_SECRET_KEY').$payload, env('TOKEN_SALT_LENGTH'));
+    }
+
+    /**
+     * 리프래시 토큰 저장
+     * 
+     * @param   App\Model\User $userInfo 유저정보
+     * @param   string $refreshToken 리프래시 토큰
+     * 
+     * @return  bool true
+     */
+    public function updateRefreshToken(User $userInfo, string $refreshToken) {
+        // 유저 모델 객체에 리프래시 토큰 추가
+        $userInfo->refresh_token = $refreshToken;
+
+        // 업데이트 처리
+        DB::beginTransaction();
+
+        if(!($userInfo->save())) {
+            DB::rollBack();
+            throw new PDOException();
+        }
+        DB::commit();
+
+        return true;
     }
 }
