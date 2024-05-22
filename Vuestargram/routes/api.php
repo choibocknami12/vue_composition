@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/login', [UserController::class, 'login']);
+Route::middleware('my.auth')->post('/logout', [UserController::class, 'logout']);

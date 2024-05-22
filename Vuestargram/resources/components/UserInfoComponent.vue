@@ -11,7 +11,7 @@
             <button class="btn btn-submit">글작성</button>
         </router-link>
     </div>
-    <hr>
+    
 </template>
 
 <script setup>

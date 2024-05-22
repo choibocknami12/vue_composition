@@ -6,11 +6,11 @@ use App\Exceptions\MyAuthException;
 use App\Exceptions\MyValidateException;
 use App\Models\User;
 use MyUserValidate;
-// use MyToken;
+use MyToken;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
-use App\Utils\MyToken;
+// use App\Utils\MyToken;
 
 class UserController extends Controller
 {
@@ -61,6 +61,29 @@ class UserController extends Controller
             ,'refreshToken' => $refreshToken
             ,'data' => $resultUserInfo
         ];
+        return response()->json($responseData, 200);
+    }
+
+    /** 
+     * @param Illuminate\Http\Request $request
+     * 
+     * @return response() json
+     */
+    public function logout(Request $request) {
+
+        Log::debug("리퀘스트". $request);
+        $id = MyToken::getValueInPayload($request->bearerToken(), 'idt');
+
+        $userInfo = User::find($id);
+
+        MyToken::removeRefreshToken($userInfo);
+
+        $responseData = [
+            'code' => '0',
+            'msg' => '',
+            'data' => $userInfo
+        ];
+
         return response()->json($responseData, 200);
     }
 }

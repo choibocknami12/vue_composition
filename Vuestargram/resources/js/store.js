@@ -45,6 +45,36 @@ const store = createStore({
                 alert('로그인 실패 : ' + errorCode);
             })
         },
+
+        // 로그아웃
+        logout(context) {
+            const URL = '/api/logout';
+            const config = {
+                headers: {
+                    'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
+                }
+            }
+            axios.post(URL, null, config)
+                .then( res => {
+                    console.log(res);
+                    alert('로그아웃 완료');
+                })
+                .catch( err => {
+                    console.log(err);
+                    console.log(res);
+                })
+                .finally(() => {
+                    localStorage.clear();
+
+                    // store state 초기화
+                    context.commit('setAuthFlg', false);
+                    context.commit('setUserInfo', {});
+
+                    // 보드로 이동
+                    router.replace('/login');
+
+                });
+        },
     }
 });
 
