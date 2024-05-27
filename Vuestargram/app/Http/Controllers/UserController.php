@@ -64,10 +64,13 @@ class UserController extends Controller
         return response()->json($responseData, 200);
     }
 
-    /** 
-     * @param Illuminate\Http\Request $request
+    
+    /**
+     * 로그아웃
      * 
-     * @return response() json
+     * @param   Illuminate\Http\Request $request
+     * 
+     * @return  response() json
      */
     public function logout(Request $request) {
 
@@ -85,5 +88,53 @@ class UserController extends Controller
         ];
 
         return response()->json($responseData, 200);
+    }
+
+    /**
+     * 토큰 재발급
+     * 
+     * @param   Illuminate\Http\Request $request
+     * 
+     * @return  response() json
+     */
+    public function reissue(Request $request) {
+        Log::debug("------------------------ 토큰 재발급 시작 ------------------------");
+        // 유저 pk 획득
+        $id = MyToken::getValueInPayload($request->bearerToken(), 'idt');
+        Log::debug('bearerToken'.$request->bearerToken());
+        Log::debug('유저 PK'.$id);
+
+        // 유저 정보 획득
+        $resultUserInfo = User::find($id);
+
+        // 유효한 유저 확인
+        if(!isset($resultUserInfo)) {
+            throw new MyAuthException('E20');
+        }
+
+        // 리플레시 토큰 체크
+        if($request->bearerToken() !== $resultUserInfo->refresh_token) {
+            throw new MyAuthException('E23');
+        }
+
+        
+        // 토큰 발행
+        list($accessToken, $refreshToken) = MyToken::createTokens($resultUserInfo);
+
+        // 리프래시 토큰 저장
+        MyToken::updateRefreshToken($resultUserInfo, $refreshToken);
+
+        // response Data
+        $responseData = [
+            'code' => '0'
+            ,'msg' => '인증 완료'
+            ,'accessToken' => $accessToken
+            ,'refreshToken' => $refreshToken
+            ,'data' => $resultUserInfo
+        ];
+        
+        Log::debug("------------------------ 토큰 재발급 완료 ------------------------");
+        return response()->json($responseData, 200);
+
     }
 }

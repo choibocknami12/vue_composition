@@ -2,7 +2,7 @@
 
 namespace App\Exceptions;
 
-use Excetion;
+use Exception;
 
 class MyAuthException extends Exception {
     // 에러메세지 리스트
